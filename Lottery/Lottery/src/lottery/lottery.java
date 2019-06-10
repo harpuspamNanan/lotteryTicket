@@ -1,17 +1,19 @@
 package lottery;
 
-import java.util.ArrayList;
-import java.util.Random;
+import java.util.*;
 
 public class lottery 
 {
 	ArrayList<customer> customerArray= new ArrayList<customer>();	
-	int[] storeRandomNumbers = new int[6];
+	ArrayList<Integer> storeRandomNumbers = new ArrayList<>();
+	
+	int[] splitTheArray =new int[10];
+	int t=0;
 	
 	public void buyTickets()
 	{				
-		customerArray.add(new customer("Har", 4, 6, 7,8, 7,9));
-		customerArray.add(new customer("Tirth", 4, 4, 4,4, 4,4));
+		customerArray.add(new customer("Jon", 4, 6, 7,8, 7,9));
+		customerArray.add(new customer("Adams", 4, 4, 4,4, 4,4));
 		
 		System.out.println(customerArray);
 	}        
@@ -22,11 +24,20 @@ public class lottery
 		
 		for(int i = 0; i< 6; i++)
 		{
-			storeRandomNumbers[i] = rand1.nextInt(8)+1;
-			System.out.println(storeRandomNumbers[i]);
+			storeRandomNumbers.add(rand1.nextInt(8)+1);
+			
 		}
+		System.out.println(storeRandomNumbers);
 		
-		if(customerArray.In)
+		
+		
+		//splitTheArray[t++] = Integer.parseInt(customerArray[0][1]);
+		
+	   // System.out.println("Common Items: "+(customerArray.stream().filter(storeRandomNumbers::contains).collect(Collectors.toList())));
+	
+		
+		
+	
 	}
 
 	
